@@ -4,9 +4,9 @@ using namespace std;
 
 void infoObject(Object_Hell nameObj)
 {
-    nameObj.getName();
-    nameObj.GetTypeString();
-    nameObj.getPassive();
+    cout << nameObj.getName() << endl;
+    cout << nameObj.GetTypeString() << endl;
+    cout << nameObj.getPassive() << endl;
 
 }
 
@@ -16,7 +16,7 @@ int main()
 
     Object_Hell d1("Potion", false, false, Type::Death, "TG");
 
-    cout << d1.getName();
+    infoObject(d1);
 
 }
 
