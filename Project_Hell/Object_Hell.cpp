@@ -3,13 +3,11 @@
 
 
 
-Object_Hell::Object_Hell(std::string n, bool p, bool b, Type e, std::string d)
+Object_Hell::Object_Hell(std::string n, bool p, bool b)
 {
 	setName(n);
 	setPassive(p);
 	setBonus(b);
-	setType(e);
-	setDes(d);
 }
 
 Object_Hell::~Object_Hell()

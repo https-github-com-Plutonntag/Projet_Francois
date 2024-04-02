@@ -3,14 +3,14 @@
 
 class heal : public Object_Hell
 {
+	int d = 20;
+public :
 
-private :
+	int setHeal(int d);
 
-	int heal :: getHeal()
-	{
+	void BeHeal(int d);
 
 
-	}
 
 
 

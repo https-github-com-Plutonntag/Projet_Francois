@@ -5,7 +5,6 @@ using namespace std;
 void infoObject(Object_Hell nameObj)
 {
     cout << nameObj.getName() << endl;
-    cout << nameObj.GetTypeString() << endl;
     cout << nameObj.getPassive() << endl;
 
 }
