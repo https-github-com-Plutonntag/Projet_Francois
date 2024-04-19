@@ -19,13 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="heal.cpp" />
+    <ClCompile Include="Backloop.cpp" />
+    <ClCompile Include="Death.cpp" />
+    <ClCompile Include="Inventaire.cpp" />
     <ClCompile Include="Object_Hell.cpp" />
     <ClCompile Include="Project_Hell_Text.cpp" />
+    <ClCompile Include="Remove.cpp" />
+    <ClCompile Include="vision.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="heal.h" />
+    <ClInclude Include="Backloop.h" />
+    <ClInclude Include="Death.h" />
+    <ClInclude Include="Inventaire.h" />
     <ClInclude Include="Object_Hell.h" />
+    <ClInclude Include="Remove.h" />
+    <ClInclude Include="vision.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
