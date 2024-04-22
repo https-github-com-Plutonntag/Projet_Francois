@@ -334,7 +334,18 @@ int main() {
         showGrid(grid, nbPortes, nbChemin);
         cout << " Votre choix : ";
         cin >> userChoice;
-       
+        switch (userChoice) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+                cout << "On a dit 1 - 2 ou 3 allez ouste!  " << endl;
+                return 1;
+            }
+        
         
         // Si Le choix es bon, continue 
         
