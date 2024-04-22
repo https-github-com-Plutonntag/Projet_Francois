@@ -136,7 +136,7 @@ int main() {
     // Inventaire
     Inventaire inventaire;
 
-    inventaire.AddObject(Object_vision);
+    //inventaire.AddObject(Object_vision);
     //inventaire.AddObject(Object_Backloop);
     //inventaire.AddObject(Object_Death);
     //inventaire.AddObject(Object_Remove);
