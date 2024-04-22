@@ -86,6 +86,11 @@ void OpenInventaire(Inventaire inventaire, vision* object1, Backloop* object2) {
             system("cls");
             
         }
+        else {
+            inventaire.setOpen(false);
+            system("cls");
+            cout << "Eh bah non !!! ecoute quoi !";
+        }
     }
 }
 
@@ -222,6 +227,8 @@ int main() {
         cout << "Devinez la porte numero " << correctGuesses + 1 << " choisissez parmis les differents chemins (1, 2 ou 3) : ";
         int userChoice;
         // Sauvegarde le bon chemin dans l'objet Vision
+        
+        
 
         Object_vision.enterPath(sequence[correctGuesses]);
         std::string InvenOp;
@@ -327,9 +334,10 @@ int main() {
         showGrid(grid, nbPortes, nbChemin);
         cout << " Votre choix : ";
         cin >> userChoice;
+       
         
         // Si Le choix es bon, continue 
-
+        
         if (userChoice == sequence[correctGuesses]) {
             cout << "C'est vrai ! Vous avez devine la bonne porte ." << endl;
             correctGuesses++;
