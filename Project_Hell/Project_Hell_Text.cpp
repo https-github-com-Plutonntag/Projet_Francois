@@ -55,10 +55,10 @@ void showGrid(char grid[4][100], int nbPortes, int nbChemin) {
     cout << endl;
 }
 // Fonction qui affiche l'inventaire
-void OpenInventaire(Inventaire inventaire, vision* object1, Backloop* object2) {
+void OpenInventaire(Inventaire* inventaire, vision* object1, Backloop* object2) {
 
-    inventaire.Inventory();
-    while (inventaire.getOpen()) {
+    inventaire->Inventory();
+    while (inventaire->getOpen()) {
         // choisir l'objet a utiliser
         std::string choix;
         std::cout << " Choisie quel objet tu veux utiliser : \"X\" pour fermer l'inventaire : ";
@@ -66,28 +66,28 @@ void OpenInventaire(Inventaire inventaire, vision* object1, Backloop* object2) {
         
         if (VerifObject(choix, *object1)) // Véfifie si le mot marqué est bien celui de la vision
         {
-            inventaire.SuppObject(object1);
+            inventaire->SuppObject(object1);
             cout << endl;
             object1->SeePath();
             cout << endl;
-            inventaire.Inventory();
+            inventaire->Inventory();
 
 
         }
         else if (VerifObject(choix, *object2)) { // Véfifie si le mot marqué est bien celui de la backloop
 
-            inventaire.SuppObject(object2);
+            inventaire->SuppObject(object2);
             object2->setUseBackloop(false);
-            inventaire.Inventory();
+            inventaire->Inventory();
         }
-        else if (choix == "X" && inventaire.getOpen() == true) {// Ferme l'Inventaire
+        else if (choix == "X" && inventaire->getOpen() == true) {// Ferme l'Inventaire
 
-            inventaire.setOpen(false);
+            inventaire->setOpen(false);
             system("cls");
             
         }
         else {
-            inventaire.setOpen(false);
+            inventaire->setOpen(false);
             system("cls");
             cout << "Eh bah non !!! ecoute quoi !";
         }
@@ -141,7 +141,7 @@ int main() {
     // Inventaire
     Inventaire inventaire;
 
-    //inventaire.AddObject(Object_vision);
+    inventaire.AddObject(Object_vision);
     //inventaire.AddObject(Object_Backloop);
     //inventaire.AddObject(Object_Death);
     //inventaire.AddObject(Object_Remove);
@@ -238,7 +238,7 @@ int main() {
         // Si appuyer sur "N", Ouvrir l'inventaire
 
         if (InvenOp == "N") {
-            OpenInventaire(inventaire, &Object_vision, &Object_Backloop);
+            OpenInventaire(&inventaire, &Object_vision, &Object_Backloop);
         }
         // Si pas utiliser, Sauvegarde la dernière porte emprunter 
 
